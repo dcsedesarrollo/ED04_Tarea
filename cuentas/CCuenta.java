@@ -6,15 +6,18 @@
 package cuentas;
 public class CCuenta {
 
+	/** Variables encapsuladas */
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInteres;
 
+    /** Método constructor vacío*/
     public CCuenta()
     {
     }
 
+    /** Método constructor con parámetros*/
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -22,11 +25,13 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /** Método estado, devuelve el saldo */
     public double estado()
     {
         return saldo;
     }
 
+    /** Método ingresar dinero. Si se inserta una cantidad menor a cero devuelve una excepción */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -34,6 +39,7 @@ public class CCuenta {
         saldo = saldo + cantidad;
     }
 
+    /** Método retirar dinero. Si se inserta una cantidad menor a cero devuelve una excepción */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -43,6 +49,7 @@ public class CCuenta {
         saldo = saldo - cantidad;
     }
     
+    /** Método operativa_cuenta. Se deben dar dos parámetros */
     public void operativa_cuenta (CCuenta cuenta, float cantidad) {
     	double saldoActual;
     	
