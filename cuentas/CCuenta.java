@@ -38,4 +38,24 @@ public class CCuenta {
             throw new Exception ("No se hay suficiente saldo");
         saldo = saldo - cantidad;
     }
+    
+    public void operativa_cuenta (CCuenta cuenta) {
+    	double saldoActual;
+    	
+    	saldoActual = cuenta.estado();
+        System.out.println("El saldo actual es"+ saldoActual );
+
+        try {
+            cuenta.retirar(2300);
+        } catch (Exception e) {
+            System.out.print("Fallo al retirar");
+        }
+        try {
+            System.out.println("Ingreso en cuenta");
+            cuenta.ingresar(695);
+        } catch (Exception e) {
+            System.out.print("Fallo al ingresar");
+        }
+    }
+    
 }
