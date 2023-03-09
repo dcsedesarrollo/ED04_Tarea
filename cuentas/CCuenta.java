@@ -1,3 +1,8 @@
+/**
+ * Esta clase representa una cuenta bancaria.
+ * Contiene variables encapsuladas, el método constructor por defecto, el constructor por parámetros y métodos getters y setters.
+ */
+
 package cuentas;
 public class CCuenta {
 
