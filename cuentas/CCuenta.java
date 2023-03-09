@@ -38,7 +38,7 @@ public class CCuenta {
         saldo = saldo - cantidad;
     }
     
-    public void operativa_cuenta (CCuenta cuenta) {
+    public void operativa_cuenta (CCuenta cuenta, float cantidad) {
     	double saldoActual;
     	
     	saldoActual = cuenta.estado();
